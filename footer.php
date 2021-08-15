@@ -5,6 +5,8 @@ This is the template for the footer
 
 @package welk
  */
+// echo do_shortcode( '[welk_solutions]' );
+
 ?>
 <footer>
     <div class="footer-logo">
@@ -75,6 +77,32 @@ This is the template for the footer
     </div>
 </footer>
 <?php wp_footer(); ?>
+<?php
+if (is_front_page()) {
+?>
+    <script>
+        jQuery(document).ready(function($) {
+            var $nav = $('#welk-nav-fixed'),
+                $win = $(window),
+                winH = $win.height(); // Get the window height.
+
+            $win
+                .on('scroll', function() {
+                    if ($(this).scrollTop() > winH) {
+                        $nav.removeClass('main-nav').addClass('header-fixed');
+                    } else {
+                        $nav.addClass('main-nav');
+                    }
+                })
+                .on('resize', function() {
+                    // If the user resizes the window
+                    winH = $(this).height(); // you'll need the new height value
+                });
+        });
+    </script>
+<?php } ?>
+
+
 </body>
 
 </html>

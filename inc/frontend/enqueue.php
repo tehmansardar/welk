@@ -20,18 +20,23 @@ function welk_enqueue()
         $ver
     );
 
+    wp_register_style('welk_owlcarousel_css', $uri . '/assets/owlcarousel/owl.carousel.min.css', [], $ver);
+    wp_register_style('welk_owlcarousel_css_theme', $uri . '/assets/owlcarousel/owl.theme.default.min.css', [], $ver);
     wp_register_style('welk_css', $uri . '/css/style.css', [], $ver);
 
     // Register Styles
     wp_enqueue_style('welk_fontAwesome');
     wp_enqueue_style('welk_bootstrap');
+    wp_enqueue_style('welk_owlcarousel_css');
+    wp_enqueue_style('welk_owlcarousel_css_theme');
     wp_enqueue_style('welk_css');
 
+    // if (is_front_page()) {
 
     // deregister Jquery
     // wp_deregister_script('jquery');
 
-    // Register jQuery
+    // // Register jQuery
     // wp_register_script(
     //     'welk_jQuery',
     //     'https://code.jquery.com/jquery-3.2.1.slim.min.js',
@@ -39,6 +44,10 @@ function welk_enqueue()
     //     $ver,
     //     true
     // );
+
+    // Register Scripts
+    // wp_enqueue_script('welk_jQuery');
+    // }
 
     wp_register_script(
         'welk_bootstrapjs',
@@ -49,24 +58,25 @@ function welk_enqueue()
     );
 
 
+    wp_register_script(
+        'welk_owlcarousel_js',
+        $uri . '/assets/owlcarousel/owl.carousel.min.js',
+        [],
+        $ver,
+        true
+    );
+
+    wp_register_script(
+        'welk_mainjs',
+        $uri . '/js/main.js',
+        [],
+        $ver,
+        true
+    );
+
 
     // Enqueue Scripts
-
-    // wp_register_script(
-    //     'invm_popper',
-    //     'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',
-    //     [],
-    //     $ver,
-    //     true
-    // );
-
-    // Register Scripts
-    // wp_enqueue_script('welk_jQuery');
     wp_enqueue_script('welk_bootstrapjs');
-    // wp_enqueue_script('invm_bootstrap_js');
-    // wp_enqueue_script('invm_bxslider_js');
-    // wp_enqueue_script('invm_script_js');
-    // wp_enqueue_script('invm_selectInput_js');
-    // wp_enqueue_script('invm_parsley');
-    // wp_enqueue_script('invm_dynamic_js');
+    wp_enqueue_script('welk_owlcarousel_js');
+    wp_enqueue_script('welk_mainjs');
 }

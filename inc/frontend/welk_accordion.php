@@ -56,7 +56,7 @@ if ($myQuery->have_posts()) {
 						</h5>
 					</div>
 
-					<div id="<?php echo get_the_ID(); ?>" class="collapse <?php $first_post ? "show" : "" ?>" aria-labelledby="headingOne" data-parent="#accordion">
+					<div id="<?php echo get_the_ID(); ?>" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
 						<div class="card-body" style="
 								font-size: 16px !important;
 								color: #6a6a6a;
@@ -78,11 +78,3 @@ if ($myQuery->have_posts()) {
 	wp_reset_postdata();
 }
 ?>
-<script>
-	jQuery(document).ready(function($) {
-		$('.accordion-heading').on('click', function() {
-			let getImg = $(this).attr('data-img');
-			$('.accordion-img').attr('src', getImg);
-		});
-	});
-</script>
