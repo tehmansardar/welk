@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
 		'elementor-col-100'
 	);
 
-	$('.owl-carousel').owlCarousel({
+	$('.solutions .owl-carousel').owlCarousel({
 		loop: true,
 		margin: 10,
 		responsive: {
@@ -37,6 +37,30 @@ jQuery(document).ready(function ($) {
 			},
 			1000: {
 				items: 3,
+			},
+		},
+	});
+
+	$('.equipo .owl-carousel').owlCarousel({
+		loop: true,
+		margin: 10,
+		nav: true,
+		navText: [
+			'<i class="fal fa-arrow-left"></i>',
+			'<i class="fal fa-arrow-right"></i>',
+		],
+		dots: false,
+		autoplay: true,
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			600: {
+				items: 1,
+			},
+			1000: {
+				items: 1,
 			},
 		},
 	});

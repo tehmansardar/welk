@@ -311,6 +311,54 @@ footer .footer-button a:hover {
 	}
 } */
 
+/* equipo shortcode */
+
+.equipo .fa-arrow-left {
+	font-size: 20px;
+	color: #ee7527;
+}
+.equipo .fa-arrow-right {
+	font-size: 30px;
+	color: #ee7527;
+}
+.equipo .owl-carousel .owl-nav button.owl-prev {
+	border: 2px solid #ee7527;
+	padding: 10px !important;
+	border-radius: 50%;
+	outline: none;
+	width: 60px;
+	height: 60px;
+}
+.equipo .owl-carousel .owl-nav button.owl-next {
+	border: 2px solid #ee7527;
+	padding: 15px !important;
+	border-radius: 50%;
+	outline: none;
+	width: 70px;
+	height: 70px;
+}
+.equipo .owl-carousel .owl-nav button.owl-prev:hover,
+.equipo .owl-carousel .owl-nav button.owl-next:hover {
+	border-color: #fff;
+	background: none;
+}
+.equipo .owl-carousel .owl-nav button.owl-prev:hover .fa-arrow-left,
+.equipo .owl-carousel .owl-nav button.owl-next:hover .fa-arrow-right {
+	color: #fff;
+}
+
+.equipo .owl-theme .owl-dots,
+.equipo .owl-theme .owl-nav {
+	margin-left: 15%;
+	margin-top: -20px;
+	z-index: 999 !important;
+}
+.equipo p {
+	color: #cccccc;
+	font-weight: 300;
+	line-height: 26px;
+}
+
 @media only screen and (max-width: 600px) {
 	footer {
 		display: flex;

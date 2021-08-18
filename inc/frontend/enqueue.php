@@ -8,7 +8,7 @@ function welk_enqueue()
     // Enqueue Style
     wp_register_style(
         'welk_fontAwesome',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+        'https://pro.fontawesome.com/releases/v5.2.0/css/all.css',
         [],
         $ver
     );
@@ -34,19 +34,19 @@ function welk_enqueue()
     // if (is_front_page()) {
 
     // deregister Jquery
-    // wp_deregister_script('jquery');
+    wp_deregister_script('jquery');
 
     // // Register jQuery
-    // wp_register_script(
-    //     'welk_jQuery',
-    //     'https://code.jquery.com/jquery-3.2.1.slim.min.js',
-    //     [],
-    //     $ver,
-    //     true
-    // );
+    wp_register_script(
+        'welk_jQuery',
+        'https://code.jquery.com/jquery-3.2.1.slim.min.js',
+        [],
+        $ver,
+        true
+    );
 
     // Register Scripts
-    // wp_enqueue_script('welk_jQuery');
+    wp_enqueue_script('welk_jQuery');
     // }
 
     wp_register_script(

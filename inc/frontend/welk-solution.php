@@ -17,7 +17,7 @@ if ($myQuery->have_posts()) {
 
 ?>
 
-    <section style="
+    <section class="solutions" style="
 				display: flex;
 				justify-content: center;
 				align-items: center;

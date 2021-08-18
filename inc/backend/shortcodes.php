@@ -54,3 +54,21 @@ function welk_solutions($atts, $content = null)
     include get_theme_file_path('/inc/frontend/welk-solution.php');
     return ob_get_clean();
 }
+
+function welk_equipo($atts, $content = null)
+{
+
+    //[welk_equipo]
+
+    //get the attributes
+    $atts = shortcode_atts(
+        array(),
+        $atts,
+        'welk_equipo'
+    );
+
+    //return HTML
+    ob_start();
+    include get_theme_file_path('/inc/frontend/welk-equipo.php');
+    return ob_get_clean();
+}
